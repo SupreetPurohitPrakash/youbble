@@ -1,0 +1,18 @@
+<div class="pageheader__wrap">
+  <div class="pageheader">
+    <?php
+                if(isset($pageImg)) {
+          ?>
+    <div class="pageheader-bg">
+      <img src="<?php echo $pageImg ?>" alt="" class="imgtobg-img">
+    </div>
+    <?php
+                }
+            ?>
+    <div class="container">
+      <div class="pageheader-title">
+        <h1><?php echo $pageName ?></h1>
+      </div>
+    </div>
+  </div>
+</div>

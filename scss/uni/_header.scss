@@ -1,0 +1,52 @@
+.header {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    &-row {
+        display: flex;
+        align-items: center;
+    }
+
+    &-left {
+        flex: 0 0 25rem;
+    }
+
+    &-right {
+        color: #fff;
+        flex: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &-navigation {}
+
+    &-social {
+        margin-left: 2rem;
+
+        p,
+        span {
+            display: inline-block;
+        }
+
+        p {
+            margin-right: 1rem;
+            margin-bottom: 0;
+        }
+
+        span {
+            margin: 0 .5rem
+        }
+    }
+}
+
+.site-logo {
+    width: 15rem;
+
+    img {
+        width: 100%;
+    }
+}

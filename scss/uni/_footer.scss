@@ -1,0 +1,136 @@
+.footer {
+    position: relative;
+    overflow: hidden;
+
+    .heading-sub {
+        a {
+            text-decoration: underline;
+
+            &:hover {
+                color: $color-grayalt;
+            }
+        }
+    }
+
+    &-top {
+        z-index: 1;
+        position: relative;
+        color: #fff;
+        padding: 4rem 0;
+        text-align: center;
+        background-image: url('#{$imgPath}/pexels-rudolf-kirchner-831056.jpg');
+        background-size: cover;
+        background-position: center;
+
+        &::before,
+        &::after {
+            z-index: -1;
+            content: "";
+            @include absoldefault;
+        }
+
+        &::before {
+            background: rgba(#000, .75);
+        }
+
+        &::after {
+            background-image: url('#{$imgPath}/pattarn.png');
+        }
+    }
+
+    &-about {
+        max-width: 50rem;
+        @include margin-auto;
+        margin-bottom: 2rem;
+
+        p {
+            font-size: 1.75rem;
+            line-height: 1.8;
+            opacity: .8;
+        }
+    }
+
+    .social-icon {
+        display: inline-block;
+        margin: 2rem 0;
+
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+
+        a {
+            display: block;
+            border: 1px solid #fff;
+
+            &:hover {
+                color: #fff;
+                background-color: $color-main;
+                border-color: $color-main;
+            }
+        }
+
+        i {
+            display: block;
+            width: 4rem;
+            height: 4rem;
+            line-height: 4rem;
+            font-size: 2rem;
+        }
+    }
+
+    &-nav {
+        display: block;
+        list-style-type: none;
+        padding: 2rem 0;
+
+        >li {
+            display: inline-block;
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+
+            &:not(:last-child) {
+                margin-right: 1.5rem;
+            }
+        }
+    }
+
+    .logowrap {
+        img {
+            max-width: 18rem;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &-bot {
+        z-index: 1;
+        background-color: #fff;
+        position: relative;
+        // padding: 1rem 2rem;
+        text-align: center;
+
+        .container {
+            padding: 2rem;
+            border-top: 1px solid rgba(#fff, 0.1);
+        }
+
+        h2 {
+            font-family: $font-common;
+            font-size: 1.4rem;
+            font-weight: 500;
+            opacity: 0.8;
+
+            strong {
+                white-space: nowrap;
+            }
+        }
+
+        .logowrap {
+            margin-bottom: 2rem;
+        }
+    }
+
+    @include respond(tabland-min) {}
+
+    @include respond(tabland) {}
+}

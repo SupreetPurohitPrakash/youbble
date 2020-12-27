@@ -1,0 +1,149 @@
+.section {}
+
+.herobanner {
+    position: relative;
+    height: 85rem;
+    min-height: 100vh;
+    overflow: hidden;
+    @include unselect;
+
+    &-bg,
+    &-shape,
+    &-cont,
+    &-phone {
+        position: absolute;
+    }
+
+    &-bg {
+        @include absoldefault;
+
+        img {
+            @include imgfit;
+        }
+    }
+
+    &-shape {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 65vw;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &-cont {
+        z-index: 4;
+        position: absolute;
+        bottom: 10%;
+        left: 0;
+        width: 100%;
+
+        &-inner {
+            max-width: 45%;
+        }
+
+        .heading {
+            margin-bottom: .5rem;
+
+            &-sub {
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        .store-btns {
+            margin-top: 4.5rem;
+
+            a {
+                box-shadow: 0 4px 15px rgba(#000, .15);
+
+                &:not(:last-child) {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+
+    &-phone {
+        z-index: 5;
+        position: absolute;
+        bottom: 5%;
+        right: 30%;
+        transform: rotate(20deg);
+        transform-origin: 100% 100%;
+        box-shadow: -5px 5px 25px -5px rgba(#000, 0.3);
+        border-radius: 55px;
+
+        &-container,
+        &-gif {}
+
+        &-container {
+            z-index: 1;
+            position: relative;
+            width: 100%;
+            width: 32rem;
+        }
+
+        &-gif {
+            z-index: 0;
+            @include absolcenter;
+            width: calc(100% - 40px);
+            height: calc(100% - 30px);
+        }
+    }
+}
+
+.appshowcase {
+    position: relative;
+    max-width: 1140px;
+    @include margin-auto;
+    padding-bottom: 5rem;
+
+    .section-body {
+        position: relative;
+
+    }
+
+    &-phone {
+        z-index: 9;
+        @include absolcenter;
+        width: 300px;
+        height: 635px;
+        @include unselect;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .swiper-container {
+        width: 100%;
+        padding: 8rem 0;
+        margin-top: -8rem;
+    }
+
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 635px;
+        overflow: hidden;
+        transition: all .2s ease-out;
+
+        img {
+            @include imgfit;
+            transition: all .2s ease-out;
+        }
+
+        &.swiper-slide-active {
+            border-radius: 55px;
+
+            img {
+                padding: 1.5rem 2rem;
+            }
+        }
+    }
+}
