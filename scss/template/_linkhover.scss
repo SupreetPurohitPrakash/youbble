@@ -1,44 +1,62 @@
-.link-box {
-    color: $color-black;
-    font-family: $font-common;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    background-color: #fff;
-    border: 1px solid #fff;
-    padding: 17px 38px;
-    letter-spacing: 1.8px;
+.link-style-passby {
+    font-family: $font-title;
+    font-size: 2rem;
+    font-weight: 400;
+    position: relative;
     display: inline-block;
-    @include unselect;
+    padding: 1.5rem 2.5rem;
+    min-width: 22rem;
+    text-transform: uppercase;
+    border-width: 2px;
+    text-align: center;
+    color: #fff;
+    border: 2px solid $color-main;
+    background-color: $color-main;
+    overflow: hidden;
 
     span {
+        z-index: 1;
         position: relative;
-        display: inline-block;
-        padding-left: 18px;
-        transition: all .3s;
+    }
 
-        &::before {
-            content: "";
-            @include absoltopcenter;
-            left: 0;
-            width: 11px;
-            height: 1px;
-            background-color: $color-black;
-            display: inline-block;
-            transition: all .3s;
-        }
+    &::after {
+        content: "";
+        width: 0;
+        height: 100%;
+        top: 0;
+        position: absolute;
+        left: auto;
+        right: 0;
+        background-color: #fff;
+        border-radius: 0px;
+        -webkit-transition: width .6s cubic-bezier(.25, .8, .25, 1) 0s;
+        transition: width .6s cubic-bezier(.25, .8, .25, 1) 0s;
     }
 
     &:hover {
-        background-color: $color-gray;
+        color: $color-main;
+        background-color: transparent;
 
-        span {
-            text-indent: -18px;
-            padding-right: 18px;
+        &::after {
+            width: 100%;
+            left: 0;
+            right: auto;
+        }
+    }
 
-            &::before {
-                width: 0;
-            }
+    &-alt {
+        color: #fff;
+        background-color: $color-sub;
+        border-color: $color-sub;
+        overflow: hidden;
+
+        &:hover {
+            color: $color-sub;
+        }
+
+        &::after {
+            background-color: #fff;
+            border-radius: 0px;
         }
     }
 }

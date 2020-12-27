@@ -137,13 +137,14 @@ i.fa-phone {
   overflow: hidden;
 
   &-bg {
+    z-index: -1;
     @include absoldefault;
 
-    &::after {
-      content: "";
-      @include absoldefault;
-      background: rgba(#000, .7);
-    }
+    // &::after {
+    //   content: "";
+    //   @include absoldefault;
+    //   background: rgba(#000, .7);
+    // }
   }
 
   &-head {

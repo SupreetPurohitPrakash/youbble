@@ -1,6 +1,13 @@
 .footer {
+    z-index: 1;
     position: relative;
-    // overflow: hidden;
+
+    &-bg {
+        z-index: -1;
+        @include absoldefault;
+
+        img {}
+    }
 
     .heading-sub {
         a {
@@ -16,9 +23,7 @@
         z-index: 1;
         position: relative;
         color: #fff;
-        background-color: $color-main;
         padding: 4rem 0;
-        margin-top: 38rem;
         text-align: center;
 
         &-bg {
@@ -118,10 +123,8 @@
     }
 
     &-bot {
-        z-index: 1;
-        background-color: #fff;
         position: relative;
-        // padding: 1rem 2rem;
+        color: #fff;
         text-align: center;
 
         .container {
