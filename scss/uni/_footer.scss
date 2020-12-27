@@ -1,6 +1,6 @@
 .footer {
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
 
     .heading-sub {
         a {
@@ -16,25 +16,40 @@
         z-index: 1;
         position: relative;
         color: #fff;
+        background-color: $color-main;
         padding: 4rem 0;
+        margin-top: 38rem;
         text-align: center;
-        background-image: url('#{$imgPath}/pexels-rudolf-kirchner-831056.jpg');
-        background-size: cover;
-        background-position: center;
 
-        &::before,
-        &::after {
+        &-bg {
+            position: absolute;
+            bottom: calc(100% - 1px);
+            left: 0;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &-wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &::before {
             z-index: -1;
             content: "";
             @include absoldefault;
         }
 
         &::before {
-            background: rgba(#000, .75);
-        }
-
-        &::after {
-            background-image: url('#{$imgPath}/pattarn.png');
+            // background: rgba(#000, .75);
         }
     }
 

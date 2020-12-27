@@ -49,6 +49,7 @@
             margin-bottom: .5rem;
 
             &-sub {
+                font-size: 4rem;
                 margin-bottom: 2.5rem;
             }
         }
@@ -91,6 +92,69 @@
             @include absolcenter;
             width: calc(100% - 40px);
             height: calc(100% - 30px);
+        }
+    }
+}
+
+.abouthp {
+    position: relative;
+
+    &-box {
+        position: relative;
+        color: #fff;
+        background-color: $color-main;
+        padding: 96px 120px;
+        max-width: 1400px;
+        @include margin-auto;
+
+        &:not(.heading) {
+            margin-left: 96px;
+        }
+
+        .heading {
+            font-size: 9.5rem;
+            margin-bottom: 5rem;
+        }
+
+        p {
+            font-size: 2rem;
+            line-height: 3.5rem;
+            max-width: 50%;
+        }
+
+        @media (max-width: 1600px) {
+            .heading {
+                font-size: 8rem;
+            }
+        }
+
+        @media (max-width: 1400px) {
+            .heading {
+                font-size: 6rem;
+            }
+        }
+    }
+
+    &-vid {
+        width: 700px;
+        padding-bottom: 56.25%;
+
+        &-box {
+            position: absolute;
+            bottom: -48px;
+            right: -108px;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (max-width: 1600px) {
+            width: 600px;
         }
     }
 }
