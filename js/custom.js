@@ -11,14 +11,6 @@ jQuery(document).ready(function ($) {
     event.preventDefault();
   });
 
-  //tooltip init
-  $('[data-toggle="tooltip"]').tooltip()
-
-  var scene = $('#scene').get(0);
-  var parallaxInstance = new Parallax(scene);
-  var scene1 = $('#scene1').get(0);
-  var parallaxInstance = new Parallax(scene1);
-
   var swiper = new Swiper('.swiper-container', {
     effect: 'coverflow',
     grabCursor: true,
@@ -32,10 +24,17 @@ jQuery(document).ready(function ($) {
       modifier: 1.5,
       slideShadows: false,
     },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
     pagination: {
       el: '.swiper-pagination',
     },
   });
+
+  //tooltip init
+  $('[data-toggle="tooltip"]').tooltip();
 
   //addClass formfield
   $(".formfield input, .formfield textarea, .formfield select").addClass(
@@ -49,7 +48,7 @@ jQuery(document).ready(function ($) {
   });
 
 
-  // lightcase
+  lightcase
   $('a[data-rel^=lightcase]').lightcase();
 
   //wrapping with span
@@ -267,8 +266,8 @@ jQuery(document).ready(function ($) {
     $(".square").each(function () {
       "use strict";
       var $this = $(this);
-      var widthValue = $this.width();
-      $this.css("height", widthValue);
+      var widthValue = $this.outerWidth();
+      $this.css("minHeight", widthValue);
     });
   }
 

@@ -20,32 +20,24 @@
         flex: auto;
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: space-between;
+    }
+
+    &-nav {
+        color: $color-black;
+    }
+
+    .social-icons {
+        margin-left: 2rem;
     }
 
     &-navigation {}
 
-    &-social {
-        margin-left: 2rem;
 
-        p,
-        span {
-            display: inline-block;
-        }
-
-        p {
-            margin-right: 1rem;
-            margin-bottom: 0;
-        }
-
-        span {
-            margin: 0 .5rem
-        }
-    }
 }
 
 .site-logo {
-    width: 15rem;
+    width: 14rem;
 
     img {
         width: 100%;

@@ -1,154 +1,168 @@
 .footer {
-    z-index: 1;
-    position: relative;
+    color: #fff;
+    background-color: $color-main;
 
     &-bg {
-        z-index: -1;
-        @include absoldefault;
+        position: absolute;
+        width: 190px;
 
-        img {}
-    }
-
-    .heading-sub {
-        a {
-            text-decoration: underline;
-
-            &:hover {
-                color: $color-grayalt;
-            }
+        img {
+            width: 100%;
         }
     }
 
     &-top {
-        z-index: 1;
-        position: relative;
-        color: #fff;
-        padding: 4rem 0;
+        padding: 45px 0;
+
+        @media (max-width: 1200px) {
+            [class^="col-"] {
+                padding: 30px 15px;
+                text-align: center;
+            }
+        }
+    }
+
+    &-logo {
+        width: 100px;
+        max-width: 100%;
+
+        img {
+            width: 100%;
+        }
+
+        @media (max-width: 1200px) {
+            @include margin-auto;
+        }
+    }
+
+    &-subscribe {
+        max-width: 520px;
+        @include margin-auto;
         text-align: center;
 
-        &-bg {
-            position: absolute;
-            bottom: calc(100% - 1px);
-            left: 0;
+        p {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+    }
 
-            img {
-                width: 100%;
+    &-form {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        border-radius: 225px;
+        overflow: hidden;
+
+        input {
+            color: #fff;
+            width: 100%;
+            height: 100%;
+            font-size: 24px;
+            font-weight: 700;
+            border: 1px solid #fff;
+            background-color: transparent;
+            border-radius: 225px;
+            padding: 15px 190px 15px 30px;
+
+            &::placeholder {
+                color: #fff;
+                opacity: 8;
+            }
+
+            &:focus {
+                color: #fff;
+                background-color: transparent;
             }
         }
 
-        &-wave {
+        button {
             position: absolute;
             top: 0;
-            left: 0;
-            width: 100%;
-
-            img {
-                width: 100%;
-            }
-        }
-
-        &::before {
-            z-index: -1;
-            content: "";
-            @include absoldefault;
-        }
-
-        &::before {
-            // background: rgba(#000, .75);
-        }
-    }
-
-    &-about {
-        max-width: 50rem;
-        @include margin-auto;
-        margin-bottom: 2rem;
-
-        p {
-            font-size: 1.75rem;
-            line-height: 1.8;
-            opacity: .8;
-        }
-    }
-
-    .social-icon {
-        display: inline-block;
-        margin: 2rem 0;
-
-        &:not(:last-child) {
-            margin-right: 1.5rem;
-        }
-
-        a {
-            display: block;
-            border: 1px solid #fff;
+            right: 0;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: normal;
+            height: 100%;
+            padding: 15px 40px;
+            color: $color-main;
+            background-color: #fff;
+            border-radius: 30px;
+            border-color: transparent;
+            cursor: pointer;
+            transition: all .3s ease-out;
 
             &:hover {
-                color: #fff;
-                background-color: $color-main;
-                border-color: $color-main;
+                color: $color-black;
+                background-color: $color-sub;
             }
+        }
+
+        @media (max-width: 1200px) {
+            input {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .social-icons {
+        span:not(:last-child) {
+            margin-right: 20px;
         }
 
         i {
-            display: block;
-            width: 4rem;
-            height: 4rem;
-            line-height: 4rem;
-            font-size: 2rem;
+            font-size: 24px;
+        }
+
+        @media (max-width: 1200px) {
+            text-align: center;
         }
     }
 
     &-nav {
-        display: block;
-        list-style-type: none;
-        padding: 2rem 0;
+        text-align: right;
+        padding-left: 0;
 
-        >li {
+        li {
+            font-size: 24px;
+            font-weight: 700;
             display: inline-block;
-            font-size: 1.75rem;
-            margin-bottom: 1.5rem;
 
-            &:not(:last-child) {
-                margin-right: 1.5rem;
+            &:not(:first-child) {
+                margin-left: 35px;
+            }
+        }
+
+        &-btn {
+            color: $color-main;
+            background-color: #fff;
+            padding: 11px 42px;
+            border-radius: 26px;
+        }
+
+        @media (max-width: 1200px) {
+            text-align: center;
+
+            li {
+                margin-bottom: 10px;
             }
         }
     }
 
-    .logowrap {
-        img {
-            max-width: 18rem;
-            padding: 0;
-            margin-bottom: 2rem;
-        }
+    &-top &-nav {
+        margin-bottom: 35px;
     }
 
     &-bot {
-        position: relative;
-        color: #fff;
-        text-align: center;
+        padding: 30px 0;
+        background-color: rgba(255, 255, 255, .25);
 
-        .container {
-            padding: 2rem;
-            border-top: 1px solid rgba(#fff, 0.1);
+        p {
+            font-size: 22px;
         }
 
-        h2 {
-            font-family: $font-common;
-            font-size: 1.4rem;
-            font-weight: 500;
-            opacity: 0.8;
-
-            strong {
-                white-space: nowrap;
-            }
-        }
-
-        .logowrap {
-            margin-bottom: 2rem;
+        @media (max-width: 1200px) {
+            text-align: center;
         }
     }
-
-    @include respond(tabland-min) {}
-
-    @include respond(tabland) {}
 }

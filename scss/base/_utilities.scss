@@ -74,10 +74,10 @@
   text-transform: uppercase;
 
   &-sub {
+    color: #777777;
     font-family: $font-title;
     font-size: 2rem;
     font-weight: 700;
-    text-transform: uppercase;
     // letter-spacing: 2px;
   }
 
@@ -269,9 +269,9 @@
 
 .content-wrapper {
   p {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
-    line-height: 45px;
+    line-height: 36px;
   }
 }
 
@@ -1442,3 +1442,21 @@ p.stars {
 }
 
 .notice {}
+
+.social-icons {
+  margin-left: 2rem;
+
+  p,
+  span {
+    display: inline-block;
+  }
+
+  p {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+
+  span {
+    margin: 0 .5rem
+  }
+}
