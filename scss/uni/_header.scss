@@ -8,7 +8,7 @@
     &-row {
         display: flex;
         align-items: flex-start;
-        padding-top: 50px;
+        padding-top: 20px;
     }
 
     &-left {
@@ -29,6 +29,10 @@
 
     .social-icons {
         margin-left: 2rem;
+        background-color: $color-main;
+        border-radius: 6px;
+        padding: 5px 15px;
+        white-space: nowrap;
     }
 
     &-navigation {}
@@ -37,7 +41,7 @@
 }
 
 .site-logo {
-    width: 14rem;
+    width: 16rem;
 
     img {
         width: 100%;

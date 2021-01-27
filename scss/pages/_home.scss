@@ -8,6 +8,25 @@
             }
         }
     }
+
+    &-subscribecta {
+        .dots-bg {
+            @include absoldefault;
+
+            &::before {
+                z-index: 0;
+                content: "";
+                @include absoldefault;
+                background-color: rgba($color-sub, .85);
+            }
+
+            img {
+                z-index: 1;
+                position: relative;
+                @include imgfit;
+            }
+        }
+    }
 }
 
 .herobanner {
@@ -46,10 +65,10 @@
             position: absolute;
             bottom: 0;
             left: 15%;
-            width: 100%;
-            height: 100%;
+            width: 150%;
+            height: 150%;
             background-color: #fff;
-            transform: rotate(-35deg);
+            transform: rotate(-28deg);
             transform-origin: 0 100%;
         }
     }
@@ -375,8 +394,22 @@
         }
 
         &-infograph {
+            width: 700px;
+
+            img {
+                max-width: 100%;
+            }
+
             @media (min-width: 1201px) {
-                margin-left: -220px
+                margin-left: -220px;
+            }
+
+            @media (max-width: 1400px) {
+                width: 550px;
+            }
+
+            @media (max-width: 1200px) {
+                max-width: 100%;
             }
         }
 
@@ -773,6 +806,69 @@
                 font-size: 16px;
                 line-height: 25px;
             }
+        }
+    }
+}
+
+.subscribecta {
+    z-index: 1;
+    position: relative;
+    padding: 120px 0;
+    text-align: center;
+
+    >* {
+        width: 100%;
+    }
+
+    .heading-alt {
+        font-size: 45px;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 20px;
+        max-width: 550px;
+        @include margin-auto;
+        margin-bottom: 35px;
+
+    }
+
+    &-form {
+        position: relative;
+        width: 530px;
+        max-width: 100%;
+        height: 60px;
+        @include margin-auto;
+
+        input,
+        button {
+            height: 100%;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px 20px;
+            padding-right: 170px;
+            border: 1px solid $color-dark;
+            font-size: 24px;
+
+            &::placeholder {
+                color: $color-dark;
+                font-size: 24px;
+            }
+        }
+
+        button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 160px;
+            @include margin-auto;
+            font-size: 24px;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: $color-dark;
+            border: 0;
         }
     }
 }

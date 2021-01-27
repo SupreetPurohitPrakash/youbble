@@ -47,11 +47,8 @@
     >a {
       position: relative;
       display: inline-block;
-      font-family: $font-common;
-      font-size: 1.5rem;
-      font-weight: 600;
-      letter-spacing: 1.8px;
-      text-transform: uppercase;
+      font-size: 24px;
+      font-weight: 400;
       user-select: none;
       transition: all 0.3s ease;
 
@@ -68,12 +65,17 @@
       position: relative;
 
       &::after {
-        content: "\f107";
+        content: "\f105";
         font-family: $font-awesome;
-        font-size: 1.3rem;
+        font-size: 1.8rem;
         font-weight: 700;
         @include absoltopcenter;
         right: 2rem;
+        transition: all .3s ease-out;
+      }
+
+      &:hover::after {
+        transform: translateY(-50%) rotate(90deg);
       }
 
       >a {
@@ -84,7 +86,7 @@
         color: $color-sub;
       }
 
-      ul {
+      >ul {
         padding-left: 0;
         list-style-type: none;
         color: $color-black;
@@ -101,8 +103,7 @@
             font-family: $font-title;
             font-size: 1.5rem;
             font-weight: 400;
-            font-style: italic;
-            padding: 1.5rem;
+            padding: 1.8rem;
             user-select: none;
 
             &:hover {
@@ -169,28 +170,42 @@
     }
   }
 
-  @include respond(smdesktop-min) {
-
-    // text-align: center;
+  @media (min-width: 1601px) {
     >li {
-      padding: 0;
+      margin: 0 25px;
     }
   }
 
-  @include respond(smdesktop) {
+  @media (max-width: 1600px) and (min-width: 992px) {
     >li {
-      &:not(:last-child) {
-        margin-right: 0;
+      margin: 0 15px;
+    }
+  }
+
+  @media (max-width: 1400px) {
+    >li {
+      margin: 0 8px;
+
+      >a {
+        font-size: 20px;
       }
     }
   }
 
-  @include respond(tabland-min) {
+  @media (max-width: 1200px) {
+    >li {
+      margin: 0 5px;
+
+      >a {
+        font-size: 17px;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
     justify-content: center;
 
     >li {
-      margin: 0 2rem;
-
       >a {
         line-height: 80px;
       }
@@ -200,7 +215,7 @@
           right: 8px;
         }
 
-        ul {
+        >ul {
           position: absolute;
           top: 100%;
           left: 0;
@@ -224,7 +239,7 @@
             }
           }
 
-          ul {
+          >ul {
             transform: scaleY(1);
             visibility: visible;
           }
@@ -257,25 +272,6 @@
     }
   }
 
-  @include respond(smdesktop-bgdesktop) {
-    >li {
-      >a {
-        font-size: 1.4rem;
-        padding: .75rem .5rem;
-      }
-    }
-  }
-
-  @include respond(tabland-smdesktop) {
-    >li {
-      // padding: 1.5rem 0;
-
-      >a {
-        font-size: 1.25rem;
-        padding: 2rem .25rem;
-      }
-    }
-  }
 
   @include respond(tabland) {
     display: block;
@@ -319,6 +315,118 @@
       }
     }
   }
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -200%);
+  background-color: #fff;
+  box-shadow: 0 20px 25px rgba(#000, .15);
+  opacity: 0;
+  transition: opacity .3s ease-out;
+
+  &-about {
+    width: 550px;
+    border-radius: 4px;
+    overflow: hidden;
+
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    [class^="col-"] {
+      padding: 0;
+    }
+  }
+
+  &-projects {
+    width: 700px;
+    padding: 10px 0;
+
+    .heading-mini {
+      font-size: 1.7rem;
+    }
+
+    .row {
+      margin: 0;
+    }
+
+    [class^="col-"] {
+      padding: 0 15px;
+
+      &:not(:last-child)::after {
+        content: "";
+        @include absoltopcenter;
+        right: 0;
+        width: 1px;
+        height: 95%;
+        background-color: rgba(#000, .1);
+      }
+    }
+  }
+
+  &-list {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+
+    li {
+      display: block;
+
+      a {
+        padding: 8px 10px;
+        font-size: 18px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        border-left: 6px solid transparent;
+
+        &:hover {
+          color: $color-black;
+          background-color: $color-gray;
+          border-left-color: $color-yellow;
+        }
+
+        img {
+          width: 15px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  &-list &-list {
+    padding-left: 15px;
+  }
+
+  &-card {
+    background-color: $color-gray;
+
+    &-img {
+      height: 235px;
+
+      img {
+        @include imgfit;
+      }
+    }
+
+    &-cont {
+      padding: 25px;
+
+      p {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+  }
+}
+
+.navul li:hover .submenu {
+  transform: translate(-50%, 0);
+  opacity: 1;
 }
 
 /* nav toggle icon */

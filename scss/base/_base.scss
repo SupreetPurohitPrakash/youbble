@@ -53,7 +53,7 @@ a {
   -o-transition: all 400ms ease;
 
   &:hover {
-    color: $color-sub;
+    color: $color-main;
     text-decoration: none;
     outline: none;
   }
@@ -140,6 +140,10 @@ i.fa-phone {
   &-bg {
     z-index: -1;
     @include absoldefault;
+
+    img {
+      @include imgfit;
+    }
 
     // &::after {
     //   content: "";
