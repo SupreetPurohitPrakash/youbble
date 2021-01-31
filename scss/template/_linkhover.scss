@@ -13,6 +13,8 @@
     border: 2px solid $color-main;
     background-color: $color-main;
     overflow: hidden;
+    transition: all .3s ease-out;
+    cursor: pointer;
 
     span {
         z-index: 1;
@@ -45,13 +47,13 @@
     }
 
     &-alt {
-        color: #fff;
+        color: $color-black;
         background-color: $color-sub;
         border-color: $color-sub;
         overflow: hidden;
 
         &:hover {
-            color: $color-sub;
+            color: $color-black;
         }
 
         &::after {

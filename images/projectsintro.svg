@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1919.301" height="1075.214" viewBox="0 0 1919.301 1075.214">
+  <g id="Group_254" data-name="Group 254" transform="translate(1.239 0)">
+    <path id="Subtraction_7" data-name="Subtraction 7" d="M-2390.7,1075.214H-4310v-38.667l263.637,11.863c.22.009,22.4.9,56.938.9,35.725,0,71.151-.919,105.293-2.732,46.115-2.449,88.812-6.5,126.9-12.029,22.327-3.243,43.344-7.044,62.466-11.3a529.291,529.291,0,0,0,56.962-15.778c8.964-3.088,17.47-6.383,25.281-9.793A244.1,244.1,0,0,0-3589.98,986.5a170.55,170.55,0,0,0,19.347-12.662,118.856,118.856,0,0,0,15.7-14.231,186.133,186.133,0,0,0,16.747-21.206,167.524,167.524,0,0,0,12.4-21.694,177.766,177.766,0,0,0,14.233-44.924c5.616-30.656,4.589-62.643,3.5-96.507-.955-29.761-1.943-60.534,1.489-92.836a323.749,323.749,0,0,1,9.024-49.518c2.293-8.625,5-17.23,8.046-25.577,3.206-8.787,6.894-17.582,10.961-26.14a129.994,129.994,0,0,1,13-21.736,118.459,118.459,0,0,1,16-17.54,123.308,123.308,0,0,1,18.685-13.745,144.139,144.139,0,0,1,21.055-10.348,182.648,182.648,0,0,1,23.109-7.352,242.765,242.765,0,0,1,24.848-4.756,385.636,385.636,0,0,1,53.648-3.325c32.957,0,68.358,3,99.593,5.652l.019,0,2,.17c33.233,2.82,64.624,5.485,93.877,5.485,18,0,33.344-1.024,46.9-3.13a172.358,172.358,0,0,0,20.728-4.464,120.54,120.54,0,0,0,18.527-6.888c52.782-25.046,104.8-69.235,146.463-124.429a460.531,460.531,0,0,0,26.746-39.489,402.931,402.931,0,0,0,21.3-40.163,317.045,317.045,0,0,0,15.11-39.5,224.5,224.5,0,0,0,8.168-37.493c2.706-21.923,2.891-47.035.551-74.637a623.21,623.21,0,0,0-10.356-70.485c-4.447-21.963-9.3-40.652-12.58-52.463-3.571-12.841-6.1-20.5-6.123-20.57H-2390.7V1075.213ZM-3330.761,602.5a64.573,64.573,0,0,0-64.5,64.5,64.573,64.573,0,0,0,64.5,64.5,64.573,64.573,0,0,0,64.5-64.5A64.573,64.573,0,0,0-3330.761,602.5Z" transform="translate(4308.762)" fill="#fff"/>
+    <g id="Group_205" data-name="Group 205">
+      <g id="Group_204" data-name="Group 204">
+        <circle id="Ellipse_40" data-name="Ellipse 40" cx="92" cy="92" r="92" transform="translate(887 575)" opacity="0.15"/>
+        <circle id="Ellipse_41" data-name="Ellipse 41" cx="115" cy="115" r="115" transform="translate(864 552)" opacity="0.1"/>
+        <circle id="Ellipse_42" data-name="Ellipse 42" cx="146" cy="146" r="146" transform="translate(833 521)" opacity="0.02"/>
+      </g>
+    </g>
+    <g id="Group_206" data-name="Group 206" opacity="0.5">
+      <g id="Ellipse_43" data-name="Ellipse 43" transform="translate(1095 731)" fill="none" stroke="#707070" stroke-width="1" stroke-dasharray="4 4">
+        <circle cx="165" cy="165" r="165" stroke="none"/>
+        <circle cx="165" cy="165" r="164.5" fill="none"/>
+      </g>
+      <g id="Ellipse_44" data-name="Ellipse 44" transform="translate(1050 706)" fill="none" stroke="#707070" stroke-width="1" stroke-dasharray="4 4">
+        <circle cx="124.5" cy="124.5" r="124.5" stroke="none"/>
+        <circle cx="124.5" cy="124.5" r="124" fill="none"/>
+      </g>
+      <g id="Group_207" data-name="Group 207">
+        <circle id="Ellipse_45" data-name="Ellipse 45" cx="24" cy="24" r="24" transform="translate(1026 789)" fill="#0a66c2"/>
+        <text id="_1" data-name="1" transform="translate(1043 822)" fill="#fff" font-size="24" font-family="FuturaPT-Demi, Futura PT" font-weight="300"><tspan x="0" y="0">1</tspan></text>
+      </g>
+      <g id="Group_208" data-name="Group 208" transform="translate(75 182)">
+        <circle id="Ellipse_45-2" data-name="Ellipse 45" cx="24" cy="24" r="24" transform="translate(1026 789)" fill="#ffc861"/>
+        <text id="_2" data-name="2" transform="translate(1043 822)" fill="#fff" font-size="24" font-family="FuturaPT-Demi, Futura PT" font-weight="300"><tspan x="0" y="0">2</tspan></text>
+      </g>
+    </g>
+    <path id="Polygon_6" data-name="Polygon 6" d="M23,0,46,40H0Z" transform="translate(1003 639) rotate(90)" fill="#fff"/>
+  </g>
+</svg>

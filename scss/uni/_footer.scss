@@ -2,6 +2,10 @@
     color: #fff;
     background-color: $color-main;
 
+    a:hover {
+        color: $color-sub;
+    }
+
     &-bg {
         position: absolute;
         width: 190px;
