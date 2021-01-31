@@ -452,7 +452,7 @@
     position: absolute;
     height: 0.25rem;
     width: 100%;
-    background: #fff;
+    background: #000;
     border-radius: 0;
     opacity: 1;
     left: 0;
@@ -482,7 +482,7 @@
     margin-top: -1rem;
 
     span {
-      background-color: #fff;
+      background-color: #000;
 
       &:nth-child(1) {
         top: 18px;
@@ -618,7 +618,6 @@
   &-body {
     position: relative;
     width: 100%;
-    height: 100%;
     min-height: 35rem;
     overflow-y: auto;
 
@@ -733,7 +732,6 @@
 
   &-footer {
     padding-top: 2rem;
-    margin-top: auto;
 
     .social-icon-group {
       margin-bottom: 1rem;
@@ -838,13 +836,14 @@
   }
 
   @include respond(phone) {
-    top: 8rem;
-    right: -100vw;
-    width: 100%;
-    height: calc(100vh - 9rem);
+    left: -100%;
+    right: auto;
+    width: 100vw;
+    // height: calc(100vh - 9rem);
     border-top: 1px solid rgba(#000, 0.2);
 
     &.active {
+      left: 0;
       box-shadow: none;
     }
 
