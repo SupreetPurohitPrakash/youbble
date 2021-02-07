@@ -78,6 +78,10 @@
             background-color: #fff;
             transform: rotate(-28deg);
             transform-origin: 0 100%;
+
+            @media (max-width: 567px) {
+                width: 200%;
+            }
         }
     }
 
@@ -196,6 +200,7 @@
         @media (max-width: 991px) {
             top: auto;
             bottom: 12%;
+            border-radius: 30px;
         }
 
         @media (max-width: 767px) {
@@ -384,6 +389,10 @@
 
             &::before {
                 opacity: 1;
+            }
+
+            @media(max-width:991px) {
+                border-radius: 30px;
             }
         }
 
@@ -947,6 +956,10 @@
         height: 60px;
         @include margin-auto;
 
+        @media (max-width:767px) {
+            margin-bottom: 60px;
+        }
+
         input,
         button {
             height: 100%;
@@ -962,6 +975,15 @@
             &::placeholder {
                 color: $color-dark;
                 font-size: 24px;
+                transition: all .3s ease-out;
+            }
+
+            &:focus::placeholder {
+                opacity: .5;
+            }
+
+            @media (max-width:767px) {
+                padding-right: 20px;
             }
         }
 
@@ -976,6 +998,12 @@
             color: #fff;
             background-color: $color-dark;
             border: 0;
+            cursor: pointer;
+
+            @media(max-width: 767px) {
+                top: 100%;
+                width: 100%;
+            }
         }
     }
 }
