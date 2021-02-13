@@ -124,6 +124,16 @@ jQuery(document).ready(function ($) {
   $('.carousel-overlay-title>*').addClass('animate__animated animate__fadeInDown');
   $('.carousel-overlay-cont>*').addClass('animate__animated animate__fadeInUp');
 
+  $('.blog-hero-slider').slick({
+    infinite: true,
+    fade: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    prevArrow: '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 407.436 407.436" style="enable-background:new 0 0 407.436 407.436;" xml:space="preserve"><polygon points="315.869,21.178 294.621,0 91.566,203.718 294.621,407.436 315.869,386.258 133.924,203.718 "/></svg></button>',
+    nextArrow: '<button class="slick-next slick-arrow" aria-label="Previous" type="button"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 407.436 407.436" style="enable-background:new 0 0 407.436 407.436;" xml:space="preserve"><polygon points="112.814,0 91.566,21.178 273.512,203.718 91.566,386.258 112.814,407.436 315.869,203.718 "/></svg></button>',
+  });
+
   //changing img to wrapped div's background
   imgToBg();
 
