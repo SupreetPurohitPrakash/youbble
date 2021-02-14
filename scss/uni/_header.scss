@@ -22,6 +22,10 @@
     &-left {
         flex: 0 0 25rem;
 
+        @media (max-width: 1400px) and (min-width: 992px) {
+            flex: 0 0 19rem;
+        }
+
         @media (max-width: 567px) {
             flex: 0 0 16rem;
         }
@@ -33,6 +37,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @media (max-width: 1400px) and (min-width: 992px) {
+            // flex: 0 0 19rem;
+        }
 
         @media (max-width: 567px) {
             flex-wrap: wrap;
