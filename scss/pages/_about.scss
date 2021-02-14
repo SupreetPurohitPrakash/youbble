@@ -428,6 +428,96 @@
     }
 }
 
+.team-modal {
+    padding: 50px 20px;
+
+    .modal-lg {
+        @media (min-width: 1201px) {
+            max-width: 1100px;
+        }
+    }
+
+    button[data-dismiss="modal"] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+        width: 80px;
+        height: 80px;
+        color: #fff;
+        background-color: $color-main;
+        border-radius: 50%;
+        opacity: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        transition: all .3s ease-out;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            color: $color-black;
+            background-color: $color-sub;
+        }
+
+        span {
+            font-family: $font-title;
+            font-size: 60px;
+            font-weight: 800;
+        }
+    }
+
+    .row {
+        padding: 30px 50px;
+    }
+
+    &-profile {
+        height: 360px;
+        margin-bottom: 20px;
+
+        @media (max-width: 991px) {
+            height: 280px;
+        }
+
+        img {
+            @include imgfit;
+        }
+    }
+
+    &-cont {
+        h3 {
+            font-family: $font-title;
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0 0 20px;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 24px;
+        }
+
+        h5 {
+            color: $color-main;
+            font-family: $font-title;
+            font-size: 20px;
+            font-weight: 800;
+            margin: 20px 0 15px;
+        }
+
+        ul {
+            li {
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
 .partners {
     .row {
         &:not(:last-child) {
