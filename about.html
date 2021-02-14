@@ -493,41 +493,92 @@
                                 mission and vision of creating a sustainable growth opportunity for international
                                 communities at home and abroad.</p>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="team-card">
-                                    <div class="team-card-profile">
-                                        <img src="./images/team/piyush_shakya.png" alt="">
+                        <div class="section-body">
+                            <ul class="team-nav nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#teamManagement"
+                                        role="tab" aria-controls="home" aria-selected="true">Management Team</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#teamDevelopment"
+                                        role="tab" aria-controls="profile" aria-selected="false">Development Team</a>
+                                </li>
+                            </ul>
+                            <div class="team-nav-result">
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="teamManagement" role="tabpanel"
+                                        aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-sm-6">
+                                                <div class="team-card" data-toggle="modal" data-target="#teamModal">
+                                                    <div class="team-card-profile">
+                                                        <img src="./images/team/piyush_shakya.png" alt="">
+                                                    </div>
+                                                    <h3>Piyush Shakya</h3>
+                                                    <p>Business Lead</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6">
+                                                <div class="team-card" data-toggle="modal" data-target="#teamModal">
+                                                    <div class="team-card-profile">
+                                                        <img src="./images/team/kshitij_karki.png" alt="">
+                                                    </div>
+                                                    <h3>Kshitij Karki</h3>
+                                                    <p>Technical Lead</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6">
+                                                <div class="team-card" data-toggle="modal" data-target="#teamModal">
+                                                    <div class="team-card-profile">
+                                                        <img src="./images/team/brenda_hinson.png" alt="">
+                                                    </div>
+                                                    <h3>Brenda Hinson</h3>
+                                                    <p>Operations Lead</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6">
+                                                <div class="team-card" data-toggle="modal" data-target="#teamModal">
+                                                    <div class="team-card-profile">
+                                                        <img src="./images/team/howard_mcnamara.png" alt="">
+                                                    </div>
+                                                    <h3>Howard Mcnamara</h3>
+                                                    <p>Marketing & Communication Lead</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <h3>Piyush Shakya</h3>
-                                    <p>Business Lead</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="team-card">
-                                    <div class="team-card-profile">
-                                        <img src="./images/team/kshitij_karki.png" alt="">
+                                    <div class="tab-pane fade" id="teamDevelopment" role="tabpanel"
+                                        aria-labelledby="profile-tab">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-sm-6">
+                                                <div class="team-card" data-toggle="modal" data-target="#teamModal">
+                                                    <div class="team-card-profile">
+                                                        <img src="./images/team/sini-nyman.png" alt="">
+                                                    </div>
+                                                    <h3>Sini Nyman</h3>
+                                                    <p>Member</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6">
+                                                <div class="team-card" data-toggle="modal" data-target="#teamModal">
+                                                    <div class="team-card-profile">
+                                                        <img src="./images/team/rebecca-shrestha.png" alt="">
+                                                    </div>
+                                                    <h3>Rebecca Shrestha</h3>
+                                                    <p>Member</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6">
+                                                <div class="team-card" data-toggle="modal" data-target="#teamModal">
+                                                    <div class="team-card-profile">
+                                                        <img src="./images/team/priyanka-shrestha.png" alt="">
+                                                    </div>
+                                                    <h3>Brenda Hinson</h3>
+                                                    <p>Member</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <h3>Kshitij Karki</h3>
-                                    <p>Technical Lead</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="team-card">
-                                    <div class="team-card-profile">
-                                        <img src="./images/team/brenda_hinson.png" alt="">
-                                    </div>
-                                    <h3>Brenda Hinson</h3>
-                                    <p>Operations Lead</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="team-card">
-                                    <div class="team-card-profile">
-                                        <img src="./images/team/howard_mcnamara.png" alt="">
-                                    </div>
-                                    <h3>Howard Mcnamara</h3>
-                                    <p>Marketing & Communication Lead</p>
                                 </div>
                             </div>
                         </div>
@@ -747,6 +798,28 @@
                 </div>
             </div>
         </footer>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="teamModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="./js/bundle-min.js"></script>

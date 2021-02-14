@@ -1,0 +1,133 @@
+.page-blogdetail {
+    padding-top: 120px;
+}
+
+.section-blogdetail {}
+
+.blogdetail {
+    &-heroimg {
+        width: 100%;
+        height: 550px;
+        margin-bottom: 30px;
+
+        img {
+            @include imgfit;
+        }
+    }
+
+    &-search {
+        position: relative;
+        border-radius: 4px;
+        overflow: hidden;
+
+        .form-group {
+            margin-bottom: 0
+        }
+
+        input[type="text"] {
+            height: 50px;
+            padding: 10px 15px;
+            border: 1.5px solid $color-main;
+
+            &::placeholder {
+                font-size: 14px;
+                opacity: .75;
+            }
+        }
+
+        button[type="submit"] {
+            @include absoltopcenter;
+            right: 0;
+            margin-top: 0;
+            height: 100%;
+        }
+    }
+
+    &-side {
+        &-item {
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+
+            &-title {
+                font-family: $font-title;
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+        }
+
+        &-categories {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style-type: none;
+
+            li {
+                z-index: 1;
+                position: relative;
+                font-size: 15px;
+                font-weight: 700;
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &::before {
+                    content: "";
+                    z-index: -1;
+                    @include absoltopcenter;
+                    left: 0;
+                    width: 100%;
+                    border-top: 2px dashed rgba(#000, .35);
+                }
+
+                a,
+                span {
+                    display: inline-block;
+                    background-color: #fff;
+                }
+
+                a {
+                    text-transform: uppercase;
+                    padding-right: 10px;
+                }
+
+                span {
+                    padding-left: 10px;
+                }
+            }
+        }
+
+        &-banner {
+            position: relative;
+            height: 580px;
+
+            &::before {
+                content: "";
+                z-index: 1;
+                @include absoldefault;
+                background-color: #000;
+                opacity: .3;
+            }
+
+            &-bg {
+                z-index: 0;
+                position: relative;
+                @include imgfit;
+            }
+
+            &-cont {
+                z-index: 2;
+                @include absolcenter;
+                width: 75%;
+                text-align: center;
+                padding: 15px;
+                color: #fff;
+
+                .heading-fancy {
+                    text-shadow: 0 0 6px rgba(#000, .5);
+                }
+            }
+        }
+    }
+}

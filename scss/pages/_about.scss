@@ -102,10 +102,12 @@
         &-2,
         &-3 {
             position: absolute;
-            border-radius: 10px;
+            border-radius: 4px;
             overflow: hidden;
+            border: 5px solid #fff;
 
             img {
+                border-radius: 4px;
                 @include imgfit;
             }
         }
@@ -347,6 +349,7 @@
     }
 
     .row {
+        justify-content: center;
         margin: 0 -20px;
     }
 
@@ -374,7 +377,7 @@
             }
 
             img {
-                width: 80%;
+                width: 100%;
                 filter: grayscale(100%);
                 transition: all .3s ease-out;
             }
@@ -394,6 +397,33 @@
 
         &:hover &-profile img {
             filter: none;
+        }
+    }
+}
+
+.team-nav.nav-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    border-bottom-color: $color-sub;
+
+    li {
+        a {
+            font-family: $font-title;
+            font-size: 16px;
+            font-weight: 400;
+            padding: 10px 20px;
+            border: 0;
+
+            &:hover {
+                color: $color-sub;
+            }
+        }
+
+        a.active {
+            color: $color-black;
+            background-color: $color-sub;
         }
     }
 }
