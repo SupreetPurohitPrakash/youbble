@@ -137,10 +137,25 @@ jQuery(document).ready(function ($) {
   //changing img to wrapped div's background
   imgToBg();
 
-  if ($(window).width() > 991) {
-    scrollToClass(".header__main", ".header", "headerfixit", 0);
-  } else {
-    scrollAddClass(".header", "headerfixit")
+  scrollAddClass();
+
+  function scrollAddClass() {
+    var header = $('.header');
+    var classHeight = header.height();
+    var $window = $(window);
+
+    $(window).scroll(function () {
+      if ($window.scrollTop() >= classHeight) {
+        header.addClass('headerfixit');
+      } else {
+        header.removeClass('headerfixit');
+      }
+      if ($window.scrollTop() >= classHeight * 2) {
+        header.addClass('headerfixit');
+      } else {
+        header.removeClass('headerfixit');
+      }
+    });
   }
 
   //if clicked outside container remove said class
@@ -165,6 +180,17 @@ jQuery(document).ready(function ($) {
     }
   }
 
+  // padding to body according to header height
+  // bodyPaddingForHeader();
+
+  // $(window).on('resize', function () {
+  //   bodyPaddingForHeader();
+  // });
+
+  // $(window).scroll(function () {
+  //   bodyPaddingForHeader();
+  // });
+
   function bodyPaddingForHeader() {
     var headerHeight = $('.header').outerHeight();
 
@@ -174,7 +200,7 @@ jQuery(document).ready(function ($) {
       })
     } else {
       $('body').css({
-        'padding-top': 'inherit'
+        'padding-top': ''
       })
     }
   }
@@ -190,40 +216,6 @@ jQuery(document).ready(function ($) {
       $(unList + ":nth-child(" + i + ")").css(delayType, "" + listAdd + "ms");
       listAdd = listAdd + plusValue;
     }
-  }
-
-  function scrollToClass(classTarget, classToReceive, classToAdd, extraDistance) {
-    // var distance = $(classTarget).offset().top;
-    var $window = $(window);
-    var classTargetHeight = $(classTarget).height();
-
-    $(window).scroll(function () {
-      if ($window.scrollTop() + extraDistance >= 100) {
-        // Your div has reached the top
-        $(classToReceive).addClass(classToAdd);
-        $(classToReceive).css({
-          'margin-bottom': classTargetHeight
-        })
-      } else {
-        $(classToReceive).removeClass(classToAdd);
-        $(classToReceive).css({
-          'margin-bottom': ''
-        })
-      }
-    });
-  }
-
-  function scrollAddClass(classTarget, classToReceive) {
-    var classHeight = $(classTarget).height();
-    var $window = $(window);
-
-    $(window).scroll(function () {
-      if ($window.scrollTop() >= classHeight) {
-        $(classTarget).addClass(classToReceive);
-      } else {
-        $(classTarget).removeClass(classToReceive);
-      }
-    });
   }
 
   if ($('.filter-container')[0]) {

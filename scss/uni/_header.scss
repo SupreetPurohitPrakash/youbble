@@ -73,7 +73,26 @@
 
     &-navigation {}
 
+    &.headerfixit {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        box-shadow: 0 0 5px 1px rgba(#000, .25);
 
+        @media (min-width: 992px) {
+            padding: 10px 0;
+        }
+
+        .header-row {
+            padding-top: 0;
+        }
+
+        .site-logo {
+            width: 90px;
+        }
+    }
 }
 
 .site-logo {

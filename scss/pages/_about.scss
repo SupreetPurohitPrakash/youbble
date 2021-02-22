@@ -220,7 +220,7 @@
 
         h3 {
             font-family: $font-title;
-            font-size: 6rem;
+            font-size: 3.5rem;
             font-weight: 600;
             margin-bottom: 2.5rem;
         }
@@ -229,7 +229,7 @@
 
 .story {
     .heading {
-        font-size: 7.5rem;
+        font-size: 5rem;
 
         @media (max-width: 991px) {
             font-size: 40px;
@@ -244,6 +244,7 @@
     height: 1080px;
     overflow: hidden;
 
+
     &::before {
         z-index: 1;
         content: "";
@@ -253,6 +254,10 @@
         width: 62.5%;
         height: 100%;
         background: linear-gradient(to right, rgba(#000, .9), transparent);
+
+        @media (max-width: 991px) {
+            width: 100%;
+        }
     }
 
     &-date {
@@ -269,6 +274,16 @@
         height: 100%;
         border-right: 1px solid rgba(#fff, .3);
 
+        @media (max-width: 991px) {
+            width: 120px;
+            padding-right: 20px;
+        }
+
+        @media (max-width: 567px) {
+            width: 90px;
+            padding-right: 5px;
+        }
+
         button {
             font-size: 30px;
             font-weight: 600;
@@ -279,6 +294,11 @@
             background-color: transparent;
             cursor: pointer;
             outline: none;
+
+            @media (max-width: 991px) {
+                font-size: 18px;
+                margin: 12px 0;
+            }
 
             &:focus {
                 outline: none;
@@ -293,6 +313,16 @@
             width: 55px;
             height: 5px;
             background-color: $color-yellow;
+
+            @media (max-width: 991px) {
+                width: 15px;
+                left: 25%;
+                height: 3px;
+            }
+
+            @media (max-width: 567px) {
+                left: 15%;
+            }
         }
     }
 
@@ -316,6 +346,16 @@
             max-width: 70rem;
             transition: all .4s ease-out;
 
+            @media (max-width: 991px) {
+                left: 120px;
+                padding-left: 20px;
+            }
+
+            @media (max-width: 567px) {
+                left: 90px;
+                padding-left: 10px;
+            }
+
             &:not(.active) {
                 transform: translateY(200%);
             }
@@ -334,9 +374,21 @@
             }
 
             h3 {
+                font-family: $font-title;
                 font-size: 75px;
-                font-weight: 700;
+                font-weight: 800;
                 margin-bottom: 3rem;
+
+                @media (max-width: 991px) {
+                    font-size: 40px;
+                }
+            }
+
+            .content-wrapper-lg p {
+                @media (max-width: 567px) {
+                    font-size: 13px;
+                    line-height: 22px;
+                }
             }
         }
 
@@ -562,6 +614,41 @@
 
         &-list {
             display: none;
+
+            ul {
+                padding: 30px 0;
+                margin: 0 -10px;
+                list-style-type: none;
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    position: relative;
+                    width: calc(33.33333% - 20px);
+                    padding: 10px 20px 10px 40px;
+                    border-radius: 4px;
+                    margin: 10px;
+                    // text-align: center;
+                    font-family: $font-title;
+                    font-size: 18px;
+                    background-color: rgba($color-main, .25);
+
+
+                    &::before {
+                        color: inherit;
+                        content: "\f2b5";
+                        font-family: $font-awesome;
+                        font-size: 14px;
+                        font-weight: 400;
+                        @include absoltopcenter;
+                        left: 15px;
+                    }
+
+                    &:nth-child(2n) {
+                        background-color: rgba($color-sub, .25);
+                    }
+                }
+            }
         }
     }
 

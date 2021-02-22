@@ -76,7 +76,7 @@
 .heading {
   position: relative;
   font-family: $font-title;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 800;
   margin: 0 0 2rem;
   text-transform: uppercase;
@@ -273,23 +273,24 @@
 
 .content-wrapper {
   p {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 36px;
+    line-height: 28px;
   }
 
   &-lg p {
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 32px;
   }
 
   @media (max-width: 767px) {
     p {
-      font-size: 16px;
-      line-height: normal;
+      font-size: 14px;
+      line-height: 25px;
     }
 
     &-lg p {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 }
