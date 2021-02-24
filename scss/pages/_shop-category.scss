@@ -1,0 +1,53 @@
+.page-shop .header {
+    position: relative;
+}
+
+.shopcat {
+    @media (min-width: 992px) {
+        .row {
+            margin: 0 -20px;
+        }
+
+        [class^="col-"] {
+            padding: 15px 20px;
+        }
+    }
+
+    .card {
+        border-radius: 6px;
+        box-shadow: 0 0 3px 0px rgba(#000, .1);
+        transition: all .3s ease-out;
+
+        &-img {
+            height: 280px;
+
+            img {
+                @include imgfit;
+            }
+        }
+
+        &-cont {
+            padding: 20px 10px;
+            text-align: center;
+            background-color: #fff;
+            transition: all .3s ease-out;
+
+            h3 {
+                font-family: $font-title;
+                font-size: 22px;
+                font-weight: 600;
+                letter-spacing: .25px;
+            }
+        }
+
+    }
+
+    .card:hover {
+        box-shadow: 0 0 12px 1px rgba(#000, .25);
+    }
+
+    .card:hover .card-cont {
+        color: #fff;
+        background-color: $color-main;
+    }
+}

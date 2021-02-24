@@ -15,7 +15,9 @@
 }
 
 .page-projects .header .navul>li>a,
-.page-projects .header .navul>li.has-submenu::after {
+.page-projects .header .navul>li.has-submenu::after,
+.page-template-template-projects .header .navul>li>a,
+.page-template-template-projects .header .navul>li.has-submenu::after {
     color: #fff;
 }
 

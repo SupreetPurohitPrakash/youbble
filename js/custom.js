@@ -419,4 +419,6 @@ jQuery(document).ready(function ($) {
     $('.shop-single-preview-main img').attr('src', src);
   })
 
+  $('#modalDiscount').modal('show');
+
 });
