@@ -358,6 +358,7 @@
 
             &:not(.active) {
                 transform: translateY(200%);
+                opacity: 0;
             }
 
             >* {
