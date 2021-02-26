@@ -514,6 +514,18 @@ jQuery(document).ready(function ($) {
 
   $(window).resize(function () {
     termNav();
+  });
+
+  $(window).on("load", function () {
+    if (!sessionStorage.getItem("shown-cookiel")) {
+      $("#cookieNotice").removeClass("d-none");
+
+      sessionStorage.setItem("shown-cookiel", "true");
+    }
+  });
+
+  $('.cookie-notice-exit').click(function () {
+    $(this).parents('.cookie-notice').addClass('d-none');
   })
 
 });
