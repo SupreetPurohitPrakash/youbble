@@ -43,7 +43,7 @@
         &-toggle {
             z-index: 2;
             position: fixed;
-            top: 170px;
+            bottom: 0;
             left: 0;
             display: inline-block;
             font-family: $font-title;
@@ -55,7 +55,7 @@
             border: 2px solid $color-main;
             cursor: pointer;
             text-transform: uppercase;
-            margin-bottom: 20px;
+            margin-bottom: 0px;
             box-shadow: 0 0 12px 1px rgba(#000, .15);
 
             &:hover,
@@ -98,11 +98,26 @@
             padding-right: 15px;
             margin-bottom: 0;
             list-style-type: none;
+            max-height: 70vh;
+            overflow-y: auto;
+
+            &::-webkit-scrollbar {
+                width: 2px;
+            }
+
+            &::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: darkgrey;
+                outline: 1px solid slategrey;
+            }
 
             li {
                 a {
                     font-family: $font-title;
-                    font-size: 18px;
+                    font-size: 16px;
                     font-weight: 500;
                     display: block;
                     padding: 5px 0;
@@ -145,6 +160,28 @@
             margin-bottom: 20px;
         }
 
+        ol,
+        ul {
+            margin-bottom: 30px;
+        }
+
+        >ol {
+            padding-left: 20px;
+
+            >li {
+                &::marker {
+                    font-family: $font-title;
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+
+                >ol {
+                    padding-left: 20px;
+                }
+            }
+
+        }
+
         .list-content {
             li {
                 &::before {
@@ -157,5 +194,6 @@
                 text-decoration: underline;
             }
         }
+
     }
 }

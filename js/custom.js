@@ -473,7 +473,7 @@ jQuery(document).ready(function ($) {
       termsHeading.each(function () {
         var dataTop = $(this).attr('data-top');
         var dataHeight = $(this).attr('data-height');
-        var windowScroll = $(window).scrollTop() + $('.header').height() - 5;
+        var windowScroll = $(window).scrollTop() + $('.header').height() + 45;
         var activeId = $(this).attr('id');
 
         if (windowScroll >= dataTop && windowScroll <= dataHeight) {
@@ -511,5 +511,9 @@ jQuery(document).ready(function ($) {
 
   }
   termNav();
+
+  $(window).resize(function () {
+    termNav();
+  })
 
 });

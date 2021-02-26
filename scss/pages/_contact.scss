@@ -1,0 +1,118 @@
+.contact {
+    @media (min-width: 992px) {
+        [class^="col-"].pl-lg-5 {
+            padding-left: 120px !important;
+        }
+    }
+}
+
+.contact-info {
+    hr {
+        margin: 30px 0;
+    }
+
+    span {
+        display: block;
+    }
+
+    p {
+        i {
+            color: $color-main;
+        }
+    }
+
+    &-social {
+        padding: 20px 0;
+
+        &-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+
+
+
+            >* {
+                height: 50px;
+                line-height: 50px;
+            }
+
+            i {
+                z-index: 1;
+                position: relative;
+                display: inline-block;
+                width: 80px;
+                font-size: 20px;
+                border-radius: 225px;
+                text-align: center;
+                color: #fff;
+                margin-right: -10px;
+                background: linear-gradient(to right, #315297, #4666b3);
+                transition: all .3s ease-out;
+            }
+
+            span {
+                z-index: 0;
+                position: relative;
+                font-size: 20px;
+                display: inline-block;
+                color: #fff;
+                background-color: $color-black;
+                padding: 0 40px 0 50px;
+                border-radius: 0 225px 225px 0;
+                box-shadow: 0 0 7px 2px rgba(#000, .2);
+                transition: all .3s ease-out;
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: 100%;
+                    transform: translateY(-50%);
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                }
+
+                &::before {
+                    right: calc(100% - 25px);
+                    background-color: #4666b3;
+                }
+
+                &::after {
+                    right: calc(100% - 18px);
+                }
+
+            }
+
+            &:hover i {
+                margin-right: -20px;
+            }
+
+            &:hover span {
+                color: $color-black;
+                background-color: $color-gray;
+            }
+
+            &-instagram span::before {
+                background-color: #7143cb;
+            }
+
+            &-instagram i {
+                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            }
+
+            &-whatsapp span::before {
+                background-color: #44c054;
+            }
+
+            &-whatsapp i {
+                background: linear-gradient(to right, #44c054, #40bc50);
+
+
+            }
+        }
+    }
+}

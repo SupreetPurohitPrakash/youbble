@@ -1,3 +1,8 @@
 .page-shop {
-    padding-top: 156px;
+    // padding-top: 156px;
+}
+
+.page-haspageheader .header:not(.headerfixit) .navul>li>a,
+.page-haspageheader .header:not(.headerfixit) .navul>li::after {
+    color: #fff;
 }
